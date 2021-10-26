@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+         <div class="container">
+      <form class="searchContainer" id="search-form">
+      <input
+        type="text"
+        placeholder="Search for a city..."
+        autocomplete="off"
+        autofocus="on"
+        id="city-input"
+        class="searchForCity"
+      />
+      <input
+      type="submit"
+      value="Search"
+      id="search-field"
+      class="searchField"/>
+      <input
+      type="submit"
+      value="Current📍Location"
+      id="current-location"
+      class="currentLocation"/>
+    </form>
+       <h2>
+        <ul>
+          <li>The weather in 
+          <span id="city" class="searchedCity">
+          </span>
+        </li>
+        <li>on
+        <span class="currentDate">
+        </span>
+        </li>
+           </ul>
+      </h2>
+    <div class="weatherDescription">
+      <span id="description"></span>
+</div>
+<ul class="currentLowestHighestFeelslikeWindHumidity">
+  <li>Lowest: <span id="lowest"></span> °C</li>
+  <li>Highest: <span id="highest"></span> °C</li>
+  <li>Feels like: <span id="feels-like"></span> °C</li>
+    <li>Humidity: <span id="humidity"></span> %
+    </li>
+    <li>Wind: <span id="wind"></span> km/h</li>
+</ul>
+
+      <span id="temperature" class="currentTemperature"></span>
+<span class="units">
+        <a href="#" id="celsius">°C</a>
+        
+                </span>
+      
+      <img src="media/weather_icon_cloudy.png"
+        alt="Weather Icon Cloudy"
+        class="cloudy"
+      />
+      <div class="containerForecast">
+        <div class="row">
+          <div class="col">23.09.2021</div>
+          <div class="col">24.09.2021</div>
+          <div class="col">25.09.2021</div>
+          <div class="col">26.09.2021</div>
+          <div class="col">27.09.2021</div>
+        </div>
+        <hr class="line" />
+        <div class="row">
+          <div class="col">23°C</div>
+          <div class="col">22°C</div>
+          <div class="col">23°C</div>
+          <div class="col">24°C</div>
+          <div class="col">23°C</div>
+        </div>
+            <div class="row">
+        <div class="col">
+          <img src="media/weather_icon_sunny.png" alt="weather icon sunny" />
+        </div>
+        <div class="col">
+          <img src="media/weather_icon_cloudy.png" alt="weather icon cloudy" />
+        </div>
+        <div class="col">
+          <img src="media/weather_icon_sunny.png" alt="weather icon sunny" />
+        </div>
+        <div class="col">
+          <img
+            src="media/weather_icon_scattered_thunderstorms.png"
+            alt="weather icon scattered thunderstorms"
+            width="75px"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="media/weather_icon_rainy.png"
+            alt="weather icon rainy"
+            width="75px"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">sunny</div>
+        <div class="col">mostly cloudy</div>
+        <div class="col">sunny</div>
+        <div class="col">thunder storms</div>
+        <div class="col">rainy</div>
+      </div>
+    </div>
+    <p class="coded">Coded by Florina Seipp</p>
+    </div>
+    <script src = "src/app.js"></script>
+  </body>
+</html>
