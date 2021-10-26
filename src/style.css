@@ -4,6 +4,16 @@ body {
     sans-serif;
 }
 
+button {
+  border: 3px solid #5a6275;
+  border-radius: 50px;
+  padding: 70px 30px 70px;
+  background: #35b5e0 !important;
+  top: -150px;
+  left: 150px;
+  max-width: 180px;
+}
+
 h2 {
   text-align: center;
 }
@@ -14,16 +24,6 @@ h2,
   font-size: 18px;
   font-weight: 400;
   padding: 0 23px;
-}
-
-button {
-  border: 3px solid #5a6275;
-  border-radius: 50px;
-  padding: 70px 30px 70px;
-  background: #35b5e0 !important;
-  top: -150px;
-  left: 150px;
-  max-width: 180px;
 }
 
 hr {
@@ -91,6 +91,14 @@ ul {
   font-weight: 600;
 }
 
+.fiveDays {
+  text-align: center;
+  color: #5a6275;
+  text-decoration: underline;
+  font-size: 20px;
+  margin;
+}
+
 .line {
   border-bottom: 2px solid #5a6275 !important;
   background: #5a6275 !important;
@@ -155,7 +163,7 @@ ul {
 .weatherDescription {
   text-align: center;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 30px;
   font-style: italic;
   text-transform: capitalize;
   text-decoration: underline;
