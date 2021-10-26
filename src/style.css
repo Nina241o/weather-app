@@ -41,8 +41,12 @@ ul {
   width: 125px;
 }
 
-.coded {
-  margin: 0 0 0 490px !important;
+.col {
+  text-align: center !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-size: 18px !important;
+  color: #8fc8cc !important;
 }
 
 .coded,
@@ -50,14 +54,6 @@ ul {
   font-size: 10px;
   color: #c8e5e7;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.col {
-  text-align: center !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  font-size: 18px !important;
-  color: #8fc8cc !important;
 }
 
 .containerForecast {
