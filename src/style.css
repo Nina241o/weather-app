@@ -22,7 +22,7 @@ h2,
 .weatherDescription {
   color: #5a6275;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 550;
   padding: 0 23px;
 }
 
@@ -65,7 +65,13 @@ ul {
   border-radius: 5px;
   padding: 20px;
   max-width: 695px;
-  margin: 10px auto 50px;
+  margin: 10px auto 5px;
+}
+
+.currentDate {
+  font-weight: 700;
+  font-style: italic;
+  color: #5a6275;
 }
 
 .currentLowestHighestFeelslikeWindHumidity {
@@ -86,8 +92,13 @@ ul {
   left: 400px !important;
   border-radius: 50%;
   border: 2px solid #5a6275;
-  background-color: #fff;
-  color: #596aca;
+  background: radial-gradient(
+    circle,
+    rgba(50, 82, 106, 1) 0%,
+    rgba(114, 180, 194, 0) 50%,
+    rgba(253, 240, 223, 1) 100%
+  );
+  color: #3a5a6f;
   padding: 120px 100px 30px 70px;
   text-align: left;
   font-size: 48px;
@@ -100,6 +111,7 @@ ul {
   color: #5a6275;
   text-decoration: underline;
   font-size: 20px;
+  font-weight: 700;
 }
 
 .line {
@@ -134,7 +146,9 @@ ul {
 }
 
 .searchedCity {
-  font-weight: bold;
+  font-weight: 700;
+  font-style: italic;
+  color: #5a6275;
 }
 .currentLocation,
 .searchField {
@@ -165,9 +179,10 @@ ul {
 
 .weatherDescription {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 30px;
   font-style: italic;
   text-transform: capitalize;
   text-decoration: underline;
+  color: #3a5a6f;
 }
