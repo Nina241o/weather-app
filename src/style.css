@@ -143,17 +143,10 @@ ul {
 
 .poem {
   border: 2px dotted #fff;
-  border-radius: 5px;
+  border-radius: 30px;
   padding: 20px;
   max-width: 695px;
   margin: 10px auto 40px;
-}
-.fiveDays {
-  text-align: center;
-  color: #fff;
-  text-decoration: underline;
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .line {
