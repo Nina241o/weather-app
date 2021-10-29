@@ -43,46 +43,32 @@ if (minutes < 10) {
 currentDate.innerHTML = `${day}, ${date} ${month} ${year}, ${hours}:${minutes} hrs`;
 
 function showAllCityData(response) {
-  let city = response.data.name;
-  console.log(response.data.name);
-  let temperature = Math.round(response.data.main.temp);
-  console.log(response.data.main.temp);
-  let lowest = Math.round(response.data.main.temp_min);
-  console.log(response.data.main.temp_min);
-  let highest = Math.round(response.data.main.temp_max);
-  console.log(response.data.main.temp_max);
-  let feelsLike = response.data.main.feels_like;
-  console.log(response.data.main.feels_like);
-  let humidity = response.data.main.humidity;
-  console.log(response.data.main.humidity);
-  let windSpeed = response.data.wind.speed;
-  console.log(response.data.wind.speed);
-  let description = response.data.weather[0].main;
-  console.log(response.data.weather[0].main);
-
   let cityElement = document.querySelector("ul #city");
-  cityElement.innerHTML = `${city}`;
+  cityElement.innerHTML = response.data.name;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}`;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
   let lowestTempElement = document.querySelector("#lowest");
-  lowestTempElement.innerHTML = `${lowest}`;
+  lowestTempElement.innerHTML = Math.round(response.data.main.temp_min);
 
   let highestTempElement = document.querySelector("#highest");
-  highestTempElement.innerHTML = `${highest}`;
+  highestTempElement.innerHTML = Math.round(response.data.main.temp_max);
 
   let feelsLikeElement = document.querySelector("#feels-like");
-  feelsLikeElement.innerHTML = Math.round(`${feelsLike}`);
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${humidity}`;
+  humidityElement.innerHTML = response.data.main.humidity;
 
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = Math.round(`${windSpeed}`);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = `${description}`;
+  descriptionElement.innerHTML = response.data.weather[0].main;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(src, "http//openweathermap.org/img/wn/04d@2x.png");
 }
 
 function searchCity(city) {
