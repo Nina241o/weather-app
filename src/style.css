@@ -88,13 +88,6 @@ ul {
   color: #8fc8cc !important;
 }
 
-.coded,
-.github {
-  font-size: 10px;
-  color: #c8e5e7;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .containerForecast {
   border: 4px solid #5a6275;
   border-radius: 5px;
@@ -114,6 +107,7 @@ ul {
   margin-left: 150px;
   text-align: left;
   font-style: italic;
+  font-weight: 500;
   line-height: 24px;
   font-size: 18px;
 }
@@ -131,6 +125,7 @@ ul {
   font-size: 48px;
   font-weight: 600;
 }
+
 .cloudy {
   position: relative !important;
   top: -208px !important;
@@ -139,6 +134,16 @@ ul {
 }
 .col-6 {
   height: 270px;
+}
+
+.col-6 .active {
+  color: #29495f;
+}
+
+.col-6 .active:hover {
+  color: #29495f;
+  cursor: default;
+  text-decoration: none;
 }
 
 .poem {
@@ -161,8 +166,9 @@ ul {
   border: 4px solid #5a6275 !important;
   color: #5a6275 !important;
   font-size: 16px !important;
-  margin: 40px 50px 40px;
-  padding: 20px 0 20px 70px !important;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px 0 20px 125px !important;
   text-align: left !important;
   font-size: 18px !important;
 }
@@ -192,7 +198,7 @@ ul {
 
 .units {
   position: relative !important;
-  top: -145px !important;
+  top: -147px !important;
   right: 62px !important;
   font-weight: bold !important;
   color: #ffffff;
@@ -201,10 +207,17 @@ ul {
 
 .weatherDescription {
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
   font-style: italic;
   text-transform: capitalize;
   text-decoration: underline;
   color: #fff;
+}
+
+.col-12 {
+  font-size: 10px;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
 }
