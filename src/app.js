@@ -1,46 +1,46 @@
-let now = new Date();
-
-console.log(now);
+function formatDate(date) {
+  let today = date.getDate();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${today} ${month} ${year}, ${hours}:${minutes} hrs`;
+}
+console.log(new Date());
 
 let currentDate = document.querySelector("li .currentDate");
-let date = now.getDate();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[now.getMonth()];
-let year = now.getFullYear();
-
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-currentDate.innerHTML = `${day}, ${date} ${month} ${year}, ${hours}:${minutes} hrs`;
+let currentTime = new Date();
+currentDate.innerHTML = formatDate(currentTime);
 
 function showAllCityData(response) {
   celsiusTemperature = response.data.main.temp;
