@@ -146,12 +146,23 @@ ul {
   text-decoration: none;
 }
 
-.poem {
+.col-12-poem {
   border: 2px dotted #fff;
   border-radius: 30px;
   padding: 20px;
   max-width: 695px;
   margin: 10px auto 40px;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+.poem {
+  font-size: 15px;
+}
+
+.author {
+  line-height: 25%;
 }
 
 .line {
@@ -215,9 +226,7 @@ ul {
   color: #fff;
 }
 
-.col-12 {
-  font-size: 10px;
-  color: #fff;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.col-12-coded {
   text-align: center;
+  font-size: 10px;
 }

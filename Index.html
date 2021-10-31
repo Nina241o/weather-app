@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>-There is no bad weather-app</title>
+    <title>-The Poetry of Weather</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <br />
-        <h1>There is no wrong weather</h1>
+        <h1>The Poetry of Weather</h1>
         <form id="search-form" class="searchContainer">
           <input
             type="text"
@@ -85,10 +85,26 @@
         </div>
 
         <div class="row">
-          <div class="col-12 poem">
-            <h3>Weather Poem</h3>
+          <div class="col-12-poem">
+            <h3 id="poem">Poem for a <span class="iconDescription">Cloudy</span> Day</h3>
+            <ul class="poem">
+              <li>
+                I wandered lonely as a cloud that floats on high o'er vales and hills,
+              </li>
+              <li>
+               When all at once I saw a crowd, a host, of golden daffodils;
+              </li>
+             <li>They stretched in never-ending line along the margin of a bay:</li>
+              <li>
+                Ten thousand saw I at a glance, tossing their heads in sprightly
+                dance.
+              </li>
+            </ul>
+            <p>from
+              <div>- <span id="title">
+               "I wandered lonely as a cloud"</span> by<span id="author"> William Wadsworth</span> -</div></p>
           </div>
-        </div>
+          </div>
         <div class="containerForecast">
           <div class="row">
             <div class="col">23.09.2021</div>
@@ -148,16 +164,17 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
+          <div class="col-12-coded">
             <a
               href="https://github.com/Nina241o/weather-app"
               target="_blank"
-              class="github"
-              >Open Source code</a
+              >Open-Source code</a
             ><span> by Florina Seipp</span>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
     <script src="src/app.js"></script>
   </body>
