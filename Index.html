@@ -25,7 +25,7 @@
             autocomplete="off"
             autofocus="on"
             id="city-input"
-            class="searchForCity"
+            class="enterACity"
           />
           <input
             type="submit"
@@ -38,6 +38,12 @@
             value="Current📍Location"
             id="current-location"
             class="currentLocation"
+          />
+          <input
+            type="submit"
+            click="randomize()"
+            value="Click for Weather Poem"
+            class="weatherPoem"
           />
         </form>
         <br />
@@ -74,7 +80,7 @@
               class="btn btn-info btn-circle"
               disabled
             ></button>
-            <img src="" id="icon" class="cloudy" />
+            <img src="" id="icon" class="weatherIcon" />
             <span id="temperature" class="currentTemperature"></span>
             <span class="units">
               <a href="#" id="celsius-link" class="active">°C</a
@@ -83,26 +89,9 @@
             </span>
           </div>
         </div>
-
         <div class="row">
           <div class="col-12-poem">
-            <h3 id="poem">Poem for a <span class="iconDescription">Cloudy</span> Day</h3>
-            <ul class="poem">
-              <li>
-                I wandered lonely as a cloud that floats on high o'er vales and hills,
-              </li>
-              <li>
-               When all at once I saw a crowd, a host, of golden daffodils;
-              </li>
-             <li>They stretched in never-ending line along the margin of a bay:</li>
-              <li>
-                Ten thousand saw I at a glance, tossing their heads in sprightly
-                dance.
-              </li>
-            </ul>
-            <p>from
-              <div>- <span id="title">
-               "I wandered lonely as a cloud"</span> by<span id="author"> William Wadsworth</span> -</div></p>
+            <h3 class="title">Read a weather poem here!<span id="array-poem" class="poem"></span></h3>
           </div>
           </div>
         <div class="containerForecast">
