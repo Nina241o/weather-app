@@ -121,24 +121,24 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-function randomizePoemDisplay() {
+function displayAPoem() {
   let myArray = new Array(
-    "'How many scenes, o sun, hast thou not shone upon; How many tears, o light, have dropped before thy sight; How many heart-felt sighs, how many piercing cries, how many deeds of woe, dost thy bright light not know!' - 'Ode to the Sun' by Eloise Bibb",
+    "'How many scenes, o sun, hast thou not shone upon? How many tears, o light, have dropped before thy sight? How many heart-felt sighs, how many piercing cries, how many deeds of woe, dost thy bright light not know!' - 'Ode to the Sun' by Eloise Bibb",
     "'The line-storm clouds fly tattered and swift, the road is forlorn all day, where a myriad snowy quartz stones lift, and the hoof-prints vanish away. The roadside flowers, too wet for the bee, expend their bloom in vain. Come over the hills and far with me, and be my love in the rain.' - 'A Line-storm Song' by Robert Frost",
     "'The wind begun to rock the grass, with threatening tunes and low, he flung a menace at the earth, a menace at the sky.' - from 'A Thunderstorm' by Emily Dickinson",
-    "'I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host, of golden daffodils; they stretched in never-ending line along the margin of a bay: ten thousand saw I at a glance, tossing their heads in sprightly dance.' - from 'I wandered lonely as a cloud' by William Wadsworth",
+    "'I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host, of golden daffodils. They stretched in never-ending line along the margin of a bay- ten thousand saw I at a glance, tossing their heads in sprightly dance.' - from 'I wandered lonely as a cloud' by William Wadsworth",
     "'Throughout the afternoon I watched them there, snow-fairies falling, falling from the sky, whirling fantastic in the misty air, contending fierce for space supremacy. And they flew down a mightier force at night, as though in heaven there was revolt and riot, and they, frail things had taken panic flight down to the calm earth seeking peace and quiet. I went to bed and rose at early dawn to see them huddled together in a heap, each merged into the other upon the lawn, worn out by the sharp struggle, fast asleep. The sun shone brightly on them half the day, by night they stealthily had stol’n away.' - from 'The Snow Fairy' by Claude McKay",
     "'I leant upon a coppice gate, when Frost was spectre-gray, and Winter’s dregs made desolate the weakening eye of day. The tangled bine-stems scored the sky like strings of broken lyres, and all mankind that haunted nigh had sought their household fires…' - from 'The Darkling Thrush' by Thomas Hardy",
-    "'Cloud-walls of the morning's grey, faced with amber column, crowned with crimson cupola from a sunset solemn! May mists, for the casements, fetch pale and glimmering; With a sunbeam hid in each, and a smell of spring.' - from 'The House of Clouds' by Elizabeth Barrett Browning",
-    "'Outside the garden the wet skies harden; the gates are barred on the summer side: 'Shut out the flower-time, sunbeam and shower-time, make way for our time,' wild winds have cried. Green once and cheery, the woods, worn weary, sigh as the dreary weak sun goes home: a great wind grapples the wave, and dapples the dead green floor of the sea with foam.' - from 'Winter in Northumberland' by Algernon Charles Swinburne",
-    "'This I saw on an April day: Warm rain spilt from a sun-lined cloud, a sky-flung wave of gold at evening, and a cock pheasant treading a dusty path, shy and proud.' - from 'In April' by James Hearst",
+    "'Cloud-walls of the morning's grey, faced with amber column, crowned with crimson cupola from a sunset solemn! May mists, for the casements, fetch pale and glimmering- with a sunbeam hid in each, and a smell of spring.' - from 'The House of Clouds' by Elizabeth Barrett Browning",
+    "'Outside the garden the wet skies harden. The gates are barred on the summer side- 'Shut out the flower-time, sunbeam and shower-time, make way for our time', wild winds have cried. Green once and cheery, the woods, worn weary, sigh as the dreary weak sun goes home. A great wind grapples the wave, and dapples the dead green floor of the sea with foam.' - from 'Winter in Northumberland' by Algernon Charles Swinburne",
+    "'This I saw on an April day- Warm rain spilt from a sun-lined cloud, a sky-flung wave of gold at evening, and a cock pheasant treading a dusty path, shy and proud.' - from 'In April' by James Hearst",
     "'Who has seen the wind? Neither I nor you. But when the leaves hang trembling, the wind is passing through. Who has seen the wind? Neither you nor I. But when the trees bow down their heads, the wind is passing by. - 'Who Has Seen the Wind?' by Christina Rossetti"
   );
 
   let randomID = Math.floor(Math.random() * myArray.length);
   let arrayPoem = myArray[randomID];
 
-  const poemArrayElement = document.querySelector("h3 #array-poem");
+  let poemArrayElement = document.querySelector("#array-poem");
   poemArrayElement.innerHTML = arrayPoem;
 }
 
@@ -157,6 +157,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let poemButton = document.querySelector("#array-poem");
-poemButton.addEventListener("click", randomizePoemDisplay);
+poemButton.addEventListener("click", displayAPoem);
 
 searchCity("Berlin");
