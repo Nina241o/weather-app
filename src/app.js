@@ -42,6 +42,35 @@ let currentDate = document.querySelector("li .currentDate");
 let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+     <div class="col-2">
+      <div class="weatherForecastDate">${day}</div>
+      <hr class="line" />
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="80px"
+        class="forecastIcon"
+      />
+      <div class="weatherForecastTemperatures">
+        <span class="weatherForecastTempMax">18°C </span>
+        <span class="weatherForecastTempMin">| 12°C</span>
+      </div>
+    </div>
+   `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showAllCityData(response) {
   celsiusTemperature = response.data.main.temp;
 
@@ -160,3 +189,4 @@ let poemButton = document.querySelector("#array-poem");
 poemButton.addEventListener("click", displayAPoem);
 
 searchCity("Berlin");
+displayForecast();
