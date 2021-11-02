@@ -2,6 +2,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Arial,
     sans-serif;
+  background-color: #fbf2e5;
 }
 
 h1 {
@@ -114,14 +115,6 @@ ul {
   color: #fff;
 }
 
-.col {
-  text-align: center !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  font-size: 18px !important;
-  color: #8fc8cc !important;
-}
-
 .weatherDetails {
   color: #29495f;
   margin-top: 45px;
@@ -151,17 +144,17 @@ ul {
 .currentTemperature {
   position: relative !important;
   color: #29495f;
-  top: -125px !important;
-  right: 62px !important;
+  top: -145px !important;
+  right: 112px !important;
   font-size: 48px;
   font-weight: 600;
 }
 
 .weatherIcon {
   position: relative !important;
-  top: -208px !important;
-  right: -50px !important;
-  width: 125px;
+  top: -230px !important;
+  right: -22px !important;
+  width: 175px;
 }
 .col-6 {
   height: 270px;
@@ -169,10 +162,10 @@ ul {
 
 .units {
   position: relative !important;
-  top: -147px !important;
-  right: 62px !important;
+  top: -167px !important;
+  right: 110px !important;
   font-weight: bold !important;
-  color: #ffffff;
+  color: #b6b7c4;
   text-decoration: none;
 }
 
@@ -187,7 +180,7 @@ ul {
 }
 
 .col-12-poem {
-  border: 2px dotted #fff;
+  border: 2px dotted #8fc8cc;
   border-radius: 30px;
   padding: 20px;
   max-width: 695px;
@@ -201,14 +194,45 @@ ul {
   font-size: 15px;
 }
 
-.containerForecast {
+.weatherForecast {
   border: 4px solid #5a6275;
   border-radius: 5px;
   padding: 20px;
   max-width: 695px;
   margin: 10px auto 5px;
+  text-align: center;
 }
 
+.weatherForecastDate,
+.weatherForecastTemperatures {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  color: #8fc8cc !important;
+}
+
+.weatherForecastDate {
+  font-size: 18px;
+}
+
+.weatherForecastTemperature {
+  font-size: 16px;
+}
+
+.forecastIcon {
+  display: block;
+  margin: 0 auto;
+}
+
+.weatherForecastTempMax {
+  font-size: 16px;
+  color: #8fc8cc;
+}
+
+.weatherForecastTempMin {
+  font-size: 16px;
+  color: #8fc8cc;
+  opacity: 0.6;
+}
 .line {
   border-bottom: 2px solid #5a6275 !important;
   background: #5a6275 !important;
@@ -218,4 +242,5 @@ ul {
 .col-12-coded {
   text-align: center;
   font-size: 10px;
+  margin-bottom: 5px;
 }
