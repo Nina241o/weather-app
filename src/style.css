@@ -9,7 +9,7 @@ h1 {
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: #fff;
+  color: #ffffff;
   padding: 30px 0 10px;
   font-weight: 600;
 }
@@ -66,6 +66,22 @@ ul {
   border-radius: 5px;
 }
 
+.oscarWilde {
+  text-align: center;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0 40px;
+  margin-bottom: 0;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #000000;
+  opacity: 0.7;
+}
+
 .searchContainer {
   border-radius: 40px !important;
   box-sizing: content-box;
@@ -109,10 +125,9 @@ ul {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
-  font-style: italic;
   text-transform: capitalize;
   text-decoration: underline;
-  color: #fff;
+  color: #ffffff;
 }
 
 .weatherDetails {
