@@ -160,7 +160,7 @@ ul {
   position: relative !important;
   color: #29495f;
   top: -145px !important;
-  right: 112px !important;
+  right: 92px !important;
   font-size: 48px;
   font-weight: 600;
 }
@@ -178,7 +178,7 @@ ul {
 .units {
   position: relative !important;
   top: -167px !important;
-  right: 110px !important;
+  right: 97px !important;
   font-weight: bold !important;
   color: #b6b7c4;
   text-decoration: none;
@@ -216,17 +216,21 @@ ul {
   max-width: 695px;
   margin: 10px auto 5px;
   text-align: center;
+  color: #8fc8cc;
 }
 
-.weatherForecastDate,
+.weatherForecastWeekday.weatherForecastDate,
 .weatherForecastTemperatures {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
-  color: #8fc8cc !important;
+}
+
+.weatherForecastWeekday .weatherForecastDate {
+  font-size: 18px;
 }
 
 .weatherForecastDate {
-  font-size: 18px;
+  opacity: 0.6;
 }
 
 .weatherForecastTemperature {

@@ -43,8 +43,10 @@ currentDate.innerHTML = formatDate(currentTime);
 
 function formatTimestamp(timestamp) {
   let date = new Date(timestamp * 1000);
+
+  let forecastDate = date.getDate();
   let day = date.getDay();
-  let days = [
+  let daysForecast = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -54,7 +56,30 @@ function formatTimestamp(timestamp) {
     "Saturday",
   ];
 
-  return days[day];
+  let monthsForecast = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+
+  let month = monthsForecast[date.getMonth()];
+  let weekDay = daysForecast[day];
+
+  let dayNumber = forecastDate;
+  if (forecastDate < 10) {
+    dayNumber = `0${forecastDate}`;
+  }
+
+  return [dayNumber, weekDay, month];
 }
 
 function displayForecast(response) {
@@ -64,17 +89,24 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay, index) {
+  fiveDayForecast = formatTimestamp();
+
+  forecast.forEach((fiveDayForecast, index) => {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
      <div class="col">
-      <div class="weatherForecastDate">${formatTimestamp(forecastDay.dt)}</div>
+      <div class="weatherForecastWeekday" id="weather-forecast-weekday">${
+        formatTimestamp(fiveDayForecast.dt)[1]
+      }</div>
+      <div class="weatherForecastDate" id="weather-forecast-date">${
+        formatTimestamp(fiveDayForecast.dt)[0]
+      }/${formatTimestamp(fiveDayForecast.dt)[2]}</div>
       <hr class="line" />
       <img
         src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
+          fiveDayForecast.weather[0].icon
         }@2x.png"
         alt=""
         width="80px"
@@ -82,10 +114,10 @@ function displayForecast(response) {
       />
       <div class="weatherForecastTemperatures">
         <span class="weatherForecastTempMax">${Math.round(
-          forecastDay.temp.max
+          fiveDayForecast.temp.max
         )}°C </span>
         <span class="weatherForecastTempMin">| ${Math.round(
-          forecastDay.temp.min
+          fiveDayForecast.temp.min
         )}°C</span>
       </div>
     </div>
