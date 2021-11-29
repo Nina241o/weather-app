@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="weather-app-wrapper">
         <br />
         <h1>Talk about the Weather</h1>
@@ -71,8 +71,8 @@
         </div>
         <br />
         <br />
-        <div class="row">
-          <div class="col-6">
+        <div class="row mb-5">
+          <div class="col-md-6">
             <ul class="weatherDetails">
               <li>Lowest: <span id="lowest"></span> °C</li>
               <li>Highest: <span id="highest"></span> °C</li>
@@ -81,7 +81,7 @@
               <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <button
               type="button"
               class="btn btn-info btn-circle"
@@ -92,10 +92,14 @@
             <span class="units"> °C</span>              
           </div>
         </div>
+        <br>
+        <br>
+        <div class="container">
         <div class="row">
-          <div class="col-12-poem">
+          <div class="col-sm-12 col-12-poem">
             <h3 id="array-poem" class="poem">Read a weather poem here!</h3>
           </div>
+        </div>
         </div>
 <div class="container">
   <div class="weatherForecast" id="forecast">

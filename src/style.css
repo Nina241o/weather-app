@@ -13,6 +13,13 @@ h1 {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    padding: 20px 0;
+  }
+}
+
 h2 {
   text-align: center;
   margin: none;
@@ -25,6 +32,13 @@ h2,
   font-size: 18px;
   font-weight: 550;
   padding: 0 23px;
+}
+
+@media (max-width: 768px) {
+  h2,
+  .weatherDescription {
+    font-size: 17px !important;
+  }
 }
 
 a {
@@ -46,6 +60,12 @@ h3 {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  h3 {
+    font-size: 16;
+  }
+}
+
 hr {
   opacity: 1 !important;
 }
@@ -63,6 +83,7 @@ ul {
   margin: 0 auto;
   border: 2px solid #c8e5e7;
   border-radius: 5px;
+  padding: 0;
 }
 
 .oscarWilde {
@@ -71,6 +92,14 @@ ul {
   color: #ffffff;
   padding: 0 40px;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .oscarWilde {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 0 20px;
+  }
 }
 
 .quote {
@@ -94,10 +123,24 @@ ul {
   font-size: 18px !important;
 }
 
+@media (max-width: 768px) {
+  .searchContainer {
+    border: 2px solid #5a6275 !important;
+    padding: 20px;
+    font-size: 12px !important;
+  }
+}
+
 .enterACity {
   border: 2px solid #5a6275 !important;
   color: #5a6275 !important;
   background: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .enterACity {
+    border: 2px solid #5a6275 !important;
+  }
 }
 
 .currentLocation,
@@ -110,14 +153,35 @@ ul {
   border-radius: 3px !important;
 }
 
+@media (max-width: 768px) {
+  .currentLocation,
+  .searchField,
+  .weatherPoem {
+    font-size: 12px !important;
+    padding: 5px 0;
+  }
+}
+
 .searchedCity {
   font-weight: 700;
   color: #29495f;
 }
 
+@media (max-width: 768px) {
+  .searchedCity {
+    font-size: 17px;
+  }
+}
+
 .currentDate {
   font-weight: 700;
   color: #29495f;
+}
+
+@media (max-width: 768px) {
+  .currentDate {
+    font-size: 17px;
+  }
 }
 
 .weatherDescription {
@@ -127,6 +191,12 @@ ul {
   text-transform: capitalize;
   text-decoration: underline;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .weatherDescription {
+    font-size: 25px;
+  }
 }
 
 .weatherDetails {
@@ -155,6 +225,16 @@ ul {
   ) !important;
 }
 
+@media (max-width: 768px) {
+  .btn-info {
+    height: 125px;
+    width: 125px;
+    border: 2px solid #5a6275 !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .currentTemperature {
   position: relative !important;
   color: #29495f;
@@ -164,14 +244,22 @@ ul {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .currentTemperature {
+    top: -120px !important;
+    right: 25px !important;
+    font-size: 32px;
+  }
+}
+
 .weatherIcon {
   position: relative !important;
   top: -230px !important;
   right: -22px !important;
   width: 175px;
 }
-.col-6 {
-  height: 270px;
+.col-md-6 {
+  height: 150px;
 }
 
 .units {
@@ -183,29 +271,31 @@ ul {
   text-decoration: none;
 }
 
-.col-6 .active {
+.col-md-6 .active {
   color: #29495f;
 }
 
-.col-6 .active:hover {
+.col-sm-6 .active:hover {
   color: #29495f;
   cursor: default;
   text-decoration: none;
 }
 
 .col-12-poem {
-  border: 2px dotted #8fc8cc;
-  border-radius: 30px;
-  padding: 20px;
-  max-width: 695px;
-  margin: 10px auto 40px;
   color: #fff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
 .poem {
   font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .poem {
+    font-size: 12px;
+  }
 }
 
 .weatherForecast {
@@ -218,14 +308,28 @@ ul {
   color: #8fc8cc;
 }
 
+@media (max-width: 768px) {
+  .weatherForecast {
+    padding: 10px;
+  }
+}
+
 .weatherForecastWeekday.weatherForecastDate,
 .weatherForecastTemperatures {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
 
-.weatherForecastWeekday .weatherForecastDate {
+.weatherForecastWeekday,
+.weatherForecastDate {
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .weatherForecastWeekday,
+  .weatherForecastDate {
+    font-size: 10px;
+  }
 }
 
 .weatherForecastDate {
@@ -236,9 +340,16 @@ ul {
   font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .weatherForecastTemperature {
+    font-size: 10px;
+  }
+}
+
 .forecastIcon {
   display: block;
   margin: 0 auto;
+  padding-bottom: 5px;
 }
 
 .weatherForecastTempMax {
@@ -246,15 +357,34 @@ ul {
   color: #8fc8cc;
 }
 
+@media (max-width: 768px) {
+  .weatherForecastTempMax {
+    font-size: 10px;
+  }
+}
+
 .weatherForecastTempMin {
   font-size: 16px;
   color: #8fc8cc;
   opacity: 0.6;
 }
+
+@media (max-width: 768px) {
+  .weatherForecastTempMin {
+    font-size: 10px;
+  }
+}
+
 .line {
   border-bottom: 2px solid #5a6275 !important;
   background: #5a6275 !important;
   margin-top: 15px !important;
+}
+
+@media (max-width: 768px) {
+  .line {
+    margin-bottom: -5px;
+  }
 }
 
 .col-12-coded {

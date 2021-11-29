@@ -119,6 +119,8 @@ function displayForecast(response) {
         <span class="weatherForecastTempMin">| ${Math.round(
           fiveDayForecast.temp.min
         )}°C</span>
+        <br />
+        <br /> 
       </div>
     </div>
    `;
